@@ -1,0 +1,177 @@
+.fusion{
+    width: 1.5em;
+    height: 1em;
+    background: grey;
+    position: relative;
+}
+.fusion div{
+    width: 50%;
+    height: 0.75em;
+    border-radius: 50%;
+    background: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.mainMenuWrapper{
+    width: 100%;
+    background: #333;
+    color: #999;
+    padding: 0.5em 0;
+    
+}
+.mainMenu{
+    display: flex;
+    flex-flow: wrap row;
+    background: #333;
+    color: #999;
+    width: 600px;
+    justify-content: flex-start;
+    align-items:center;
+}
+.mainMenu *{
+    display: flex;
+    flex-flow: wrap row;
+    background: #333;
+    color: #999;
+   
+}
+.mainMenuItem{
+    display: block;
+    padding: 0 1em;
+    
+}
+.mainMenuItemName{
+    font-size: 1.5em;
+}
+
+.mainMenuItem:hover .mainMenuItemContent{
+    display: block;
+    position: absolute;
+    z-index: 99999999;
+    background: #333;
+    color: #999;
+    width: 150px;
+    max-width: 150px;
+   
+}
+
+.mainMenuItemContent li{
+    padding: 0.5em;
+}
+.mainMenuItemContent li:hover{
+    background: #000;
+    color: #FFF;
+}
+
+
+.mainMenuItemContent{
+    display: none;
+}
+
+*{
+    background: #DDD;
+}
+
+
+li{
+    list-style-type: none;
+}
+
+.upperToolsWrapper{
+    display: flex;
+    flex-flow: wrap row;
+    align-items: center;
+    padding: 0 0.25em ;
+    background: #555;
+}
+
+.upperToolsWrapper *{
+    padding: 0.25em;
+    margin: 0 0.25em;
+    background: inherit;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 2vh 2vh;
+}
+
+.promptAi, .promptAi *{
+    background: white;
+}
+
+.input{
+    position: relative;
+    margin-top: 2em;
+}
+.input label{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.input input:focus + label, .input input:active + label,.input input:not(:placeholder-shown) + label{
+    position: absolute;
+    top: -30px;
+    left: 0;
+}
+.input input{
+    border: none;
+    outline:none;
+    border-bottom: solid black 1px;
+}
+.input input::placeholder{
+    opacity: 0;
+}
+
+.promptAi canvas{
+    background: lightblue;
+}
+
+.promptAi::before{
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    position: absolute;
+    z-index: -2;
+    top: 50%;
+    left: 50%;
+    opacity: 0.5;
+    transform: translate(-50%, -50%);
+}
+
+button{
+    padding: 0.5em;
+    background: black !important;
+    color: lightgrey;
+    border-radius: 2vh 2vh;
+   
+}
+
+.loader{
+    background: transparent;
+    border: solid black 4px;
+    border-top: solid transparent 4px;
+    width: 20px;
+    height: 20px;
+    animation: 1s infinite linear rotate;
+    border-radius: 50%;
+    display: none;
+    margin: 1em;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+canvas{
+    cursor: crosshair;
+}
